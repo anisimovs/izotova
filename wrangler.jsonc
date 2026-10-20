@@ -3,13 +3,14 @@
   "name": "izotova",
   "main": "src/index.ts",
   "compatibility_date": "2026-10-01",
-  "compatibility_flags": ["nodejs_compat"],
   "observability": {
     "enabled": true
   },
   "assets": {
     "directory": "./site",
-    "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
   }
 }

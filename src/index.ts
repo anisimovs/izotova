@@ -11,7 +11,17 @@ export interface Env {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
-    const response = await env.ASSETS.fetch(request);
+    const assets = env.ASSETS;
+    if (!assets) {
+      // Не должно случиться: биндинг объявлен в wrangler.jsonc.
+      // Но 500 на каждый запрос — худший вариант, поэтому отдаём 503.
+      return new Response("Static assets binding is not available.", {
+        status: 503,
+        headers: { "Content-Type": "text/plain; charset=utf-8" },
+      });
+    }
+
+    const response = await assets.fetch(request);
 
     const headers = new Headers(response.headers);
 
