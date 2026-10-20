@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Отладочный артефакт сборки (генерируется скриптом _contact_sheet.py)
+tmp/_contact_sheet.png
