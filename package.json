@@ -1,0 +1,17 @@
+{
+  "name": "izotova-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Лендинг «Академия занимательных наук» — обучающие тетради для дошкольников",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261019.1": true
+  }
+}

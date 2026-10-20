@@ -1,6 +1,12 @@
 # macOS
 .DS_Store
 
+# Node / Cloudflare Workers
+node_modules/
+.wrangler/
+.dev.vars
+*.log
+
 # Python
 __pycache__/
 *.pyc
