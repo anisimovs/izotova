@@ -78,4 +78,4 @@ if errors:
     for e in errors:
         print("  -", e)
     sys.exit(1)
-print("Все проверки пройдены: 12 товаров, 12 ссылок, 12 обложек.")
+print(f"Все проверки пройдены: {len(pairs)} товаров, {len(pairs)} ссылок, {len(cards)} обложек.")
